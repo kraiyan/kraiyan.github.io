@@ -1,0 +1,21 @@
+@import "../abstracts/_abstracts-dir";
+
+body {
+  background-color: $body-background;
+}
+
+main {
+  min-height: 100%;
+  flex: 1;
+  max-width: 1800px;
+  text-align: left;
+  padding: 100px 20px 9rem; // padding bottom 9rem --> footer size
+  margin: 0 auto;
+}
+
+
+@media all and (max-width: 767px) {
+  .main {
+    padding: 100px 20px 9rem;
+  }
+}
