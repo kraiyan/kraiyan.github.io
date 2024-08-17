@@ -6,7 +6,7 @@ button,
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: $button-bg-clr;
+  background-color: #fff;
   color: $button-text-clr;
   text-decoration: none;
   /*adds spacing to the button*/
@@ -33,7 +33,7 @@ button:focus,
   max-width: 250px;
 }
 .button__secondary {
-  background-color: $button2-bg-clr;
+  background-color: #fff;
   color: $button2-text-clr;
 }
 
