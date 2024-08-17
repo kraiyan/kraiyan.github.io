@@ -12,7 +12,7 @@
   position: fixed;
   height: 100px;
   align-items: center;
-  background-color: $navbar;
+  background-color: $white;
 }
 
 .logo {
@@ -131,10 +131,10 @@
   }
 
   .navbar_item {
-    background-color: $navbar;
+    background-color: $white;
   }
   .navbar_item--active {
-    background-color: $nav-active-bg;
+    background-color: $white;
   }
 
   #toggle:checked + .navigation-list {
