@@ -10,17 +10,19 @@
   grid-auto-flow: dense;
   gap: 20px;
   margin: 0 auto;
+  border-radius: 50px;
   max-width: 1250px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  background-color: $card-background;
+  background-color: $white;
   position: relative;
   justify-content: space-between;
   border: 5px solid $border;
-  color: $card-text;
+  border-radius: 50px;
+  color: $white;
 
   &__content {
     margin-top: 10px;
@@ -35,8 +37,7 @@
 
   &__image-wrapper {
     width: 99.5%;
-    height: 230px;
-    padding: 0 5px;
+    padding: 0 10px;
     margin: 0 auto;
   }
 }
@@ -67,10 +68,9 @@ div.card__content p {
 
 .card__image {
   max-width: 100%;
-  height: 100%;
   margin: 0 auto;
   object-fit: contain;
-  display: block;
+  //display: block;
 }
 
 .card__tech-stack-wrapper {
