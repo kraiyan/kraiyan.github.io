@@ -20,18 +20,20 @@
     />
   </head>
   <body>
-    <div id="page-container">
+    <div id="page-container" style="background-color: black;">
       <!-- Header including the logo and the main navigation -->
-      <header class="page-header">
+      <header class="page-header" style="background-color: black;">
         <img
           class="logo"
-          src="img/logo/portfolio.png"
+          src="./img/logo/portfolio.png"
           height="50"
+          border-radius="50%"
           alt=""
         />
         <a
-          href="./files/Raiyan_resume.pdf"
-          class="button cv-button"
+          href="files/Raiyan_resume.pdf"
+          class="cv-button"
+          style="color: white;"
         >
           <!-- <img
             class="download-icon"
@@ -39,33 +41,36 @@
           /> -->
           My Resume
         </a>
-        <nav class="main-navigation page-header__item">
+        <nav class="main-navigation page-header__item" style="background-color: black;">
           <label
             id="hamburger"
             for="toggle"
             class="hamburger-icon"
           >
-            &#9776;
+          &#9776;
           </label>
           <input id="toggle" type="checkbox" />
           <ul
             role="menubar"
             class="container brackets navigation-list"
           >
-            <li class="navbar_item" role="presentation">
+            <li
+              class=" navbar_item"
+              role="presentation"
+            >
               <a
                 href="index.html"
                 role="menuitem"
-                class="navigation-list__item"
+                style="color: white;"
               >
                 home
               </a>
             </li>
-            <li class="navbar_item navbar_item--active">
+            <li class="navbar_item">
               <a
                 href="projects.html"
                 role="menuitem"
-                class="navigation-list__item navigation-list__item--active"
+                style="color: white;"
                 >projects</a
               >
             </li>
@@ -73,7 +78,7 @@
               <a
                 href="contact.html"
                 role="menuitem"
-                class="navigation-list__item"
+                style="color: white;"
                 >contact</a
               >
             </li>

@@ -45,7 +45,7 @@
 
 .navbar_item--active {
   font-weight: $font-bolder;
-  color: $nav-active;
+  color: #fff;
   background-color: #fff;
   border-radius: 15px;
 }
@@ -55,7 +55,7 @@
     font-weight: $font-light;
   }
   &--active {
-    color: $nav-active;
+    color: white;
     &:hover {
       font-weight: $font-bolder;
     }
