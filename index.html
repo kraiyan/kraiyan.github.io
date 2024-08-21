@@ -19,6 +19,72 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      
+    .showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      place-items: center;
+      padding-top: 20px;
+    }
+    @media all and (max-width: 820px) {
+      .showcase {
+        grid-template-columns: 1fr;
+      }  
+    }
+    
+    @media all and (min-width: 768px) {
+      .showcase {
+        padding: 10px 30px 0;
+      }
+      
+    }
+    
+    @media all and (min-width: 1440px) {
+      .showcase {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      
+    }
+    .count-box {
+     
+        text-align: center;
+        margin: 0 30px;
+    }
+    
+    .count {
+        font-size: 3em;
+        font-weight: bold;
+        color: white;
+        
+    }
+    
+    p {
+        font-size: 1em;
+        color: white;
+    }
+    </style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.count');
+
+    const incrementCounter = (counter) => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + target / 100);
+            setTimeout(() => incrementCounter(counter), 200);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    counters.forEach(counter => incrementCounter(counter));
+});
+
+</script>
 
   </head>
   <body>
@@ -163,6 +229,21 @@
             </div>
           </div>
         </div>
+        <section class="showcase">
+          <div class="count-box">
+              <div class="count" data-count="3">0</div>
+              <p>Years of Experience</p>
+          </div>
+          <div class="count-box">
+              <div class="count" data-count="5">0</div>
+              <p>Certifications</p>
+          </div>
+          <div class="count-box">
+              <div class="count" data-count="8">0</div>
+              <p>Projects Completed</p>
+          </div>
+      </section>
+  
         <div class="about">
           <div class="description">
             <h3 class="about__title">This is me...</h3>
