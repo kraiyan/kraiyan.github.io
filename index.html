@@ -64,6 +64,13 @@
         font-size: 1em;
         color: white;
     }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+  }
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 2; }
+  }
     </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -163,7 +170,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main">
+      <main class="main fade-in">
         <div class="profile">
           <img
             src="img/profile/Raiyan_profile.jpeg"
