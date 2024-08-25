@@ -179,7 +179,7 @@
           />
           
           <div class="profile__item">
-            <h1 class="title">Hello World...</h1>
+            <h1 class="title">I <span class="auto-type"></span></h1>
             <p>
               I'm Raiyan,
               <strong>full-stack</strong> engineer with
@@ -410,5 +410,15 @@
       </footer>
       <script src="dist/main.js"></script>
     </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed= new Typed(".auto-type",{
+        strings: ["Code","Write","Learn"],
+        typeSpeed:150,
+        backSpeed:150,
+        loop:true
+      })
+    </script>
+
   </body>
 </html>
