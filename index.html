@@ -14,12 +14,51 @@
       sizes="32x32"
     />
     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+    
+      .swiper {
+        height: 300px;
+      }
+      .swiper-slide {
+        text-align: center;
+        padding: 0 160px;
+        padding-top: 120px;
+        font-size: 25px;
+        font-weight: 800;
+        color: white;
+      }
+      @media screen and (max-width: 768px) {
+        .swiper-slide{
+          padding: 0 20px;
+        }
+      }
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background:  white;
+      }
+  
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+      }
       
     .showcase {
       display: grid;
@@ -346,6 +385,19 @@
             </div>
           </div>
         </div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">"Very good in MERN stack development. He is quickly able grasp the business requirement and work accordingly."</div>
+            <div class="swiper-slide">"In the brief period of time that I worked with Raiyan, I found quick-learning capabilities within him and his unique problem-solving approach intrigued me the most"</div>
+            <div class="swiper-slide">"Passionate Engineer with strong  CS background"</div>
+          </div>
+          <!-- If we need pagination -->
+          <div style="color:white"  class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+        </div>
         <div class="work-goals">
           <h3 class="work-goals__title">
             What I'm looking for...
@@ -418,6 +470,36 @@
         backSpeed:100,
         loop:true
       })
+      
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        speed: 1000,
+        loop: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 80,
+          slideShadows: true,
+        },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
     </script>
 
   </body>
