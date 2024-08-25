@@ -29,7 +29,7 @@
     <style>
     
       .swiper {
-        height: 300px;
+        height: 500px;
       }
       .swiper-slide {
         text-align: center;
@@ -123,7 +123,7 @@
             counter.innerText = Math.ceil(count + target / 100);
             setTimeout(() => incrementCounter(counter), 200);
         } else {
-            counter.innerText = target;
+            counter.innerText = target + " +";
         }
     };
 
@@ -228,7 +228,7 @@
             </p>
             <section class="showcase">
               <div class="count-box">
-                  <div class="count" data-count="3">0</div>
+                  <span class="count" data-count="3">0</span>
                   <p>Years of Experience</p>
               </div>
               <div class="count-box">
@@ -386,6 +386,7 @@
           </div>
         </div>
         <div class="swiper">
+          <h2 class = "values__title">Testimonials</h2>
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
