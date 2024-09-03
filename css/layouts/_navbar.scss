@@ -116,7 +116,7 @@
   .navigation-list {
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: 140%;
     display: none;
     clear: right;
     position: absolute;
@@ -127,19 +127,17 @@
   
     width: 100%;
     height: 100%;
-    border-bottom: solid 3px yellow;
-    border-radius: 3px;
     margin: 0;
     font-size: xx-large;
     font-weight: 500;
-    padding: 20px;
+    padding: 10px;
   }
 
   .navbar_item {
-    background-color: $navbar;
+    background-color: black;
   }
   .navbar_item--active {
-    background-color: $nav-active-bg;
+    background-color: yellow
   }
 
   #toggle:checked + .navigation-list {
