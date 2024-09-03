@@ -1,14 +1,16 @@
 .about {
   clear: both;
   display: flex;
+ 
   flex-direction: column;
   text-align: left;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0 0px;
 }
 
 .description {
-  margin: 0 20px;
+ 
+  margin: 0 0px;
 }
 
 .values-wrapper {
@@ -20,7 +22,7 @@
 
 .values {
   &__title {
-    margin: 20px 0;
+    margin: 0px 0;
   }
   &__item {
     flex-grow: 1;
