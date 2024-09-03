@@ -1,0 +1,38 @@
+/* --FOOTER-- */
+
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 9rem;
+}
+
+.footer__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
