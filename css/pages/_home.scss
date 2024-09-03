@@ -10,7 +10,7 @@
 .profile__portrait {
   float: left;
   width: 250px;
-  border-radius: 50%;
+  border-radius: 20%;
   border: 5px solid $border;
 }
 
@@ -26,8 +26,8 @@
 }
 
 .about__img {
-  height: 200px;
   float: right;
+  width: 200px;
   border-radius: 10%;
   margin-left: 10px;
   border: 5px solid #1f2833;

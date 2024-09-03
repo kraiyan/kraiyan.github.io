@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
     
+        @media only screen and (max-width: 768px) {
+          .profile_persona {
+            flex-direction: column !important;
+          }
+        }
       .swiper {
         height: 500px;
       }
@@ -212,7 +217,7 @@
       <main class="main fade-in">
         <div class="profile">
           <img
-            src="img/profile/Raiyan_profile.jpeg"
+            src="img/profile/raiyan_hero.jpg"
             class="profile__portrait profile__item"
             alt="a photo of Raiyan"
           />
@@ -319,15 +324,32 @@
               I have helped my team in basic training for the project,solving there queries and doubts,briefing them about tasks and validating the pushed code. 
               During this process,I was also responsible for inspecting the overall code quality and connecting the works of different developers into one 
               single page and delivering the projects in tight deadlines.
-              <br />
-              <br />
 
-             While this was about my professional life,In my personal time
-            I like playing <a href = "https://lichess.org/@/raiyanskhan" target="_blank">Chess </a>,watching series,and learning more about  new things
-             (I have this urge to constantly feed my brain with new  ideas,concepts and perspectives.).
-             Also I like having some sort of physical activites throughout my day.
-            </p>
+             
+            <br />
           </div>
+          <section class="profile_persona" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row;">
+            <div style="flex: 1 1 50%; padding: 20px; box-sizing: border-box;">
+              <p>
+                While this was about my professional life, in my personal time I like playing
+                <a href="https://lichess.org/@/raiyanskhan" target="_blank">Chess</a>, watching series,
+                and learning more about new things (I have this urge to constantly feed my brain
+                with new ideas, concepts, and perspectives.). Also, I like having some sort of
+                physical activities throughout my day.
+              </p>
+            </div>
+            <div style="flex: 1 1 50%; padding: 20px; box-sizing: border-box; text-align: center;">
+              <img 
+                src="img/profile/Raiyan_profile.jpeg"
+                style="max-width: 250px; height: auto; border-radius: 70px;"
+                alt="a photo of Raiyan"
+              />
+            </div>
+          </section>
+          
+         
+          
+          
           <div class="values">
             <h2 class="values__title">My values:</h2>
             <div class="values-wrapper">
