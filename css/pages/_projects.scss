@@ -16,11 +16,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: $card-background;
+  background-color: white;
   position: relative;
   justify-content: space-between;
   border: 5px solid $border;
-  color: $card-text;
+  color: black;
 
   &__content {
     margin-top: 10px;
@@ -45,6 +45,7 @@ div.card__content p {
   font-size: 1em;
   line-height: 1.125;
   min-height: 9em;
+  color: black;
 }
 
 .card__content > p:first-of-type {
