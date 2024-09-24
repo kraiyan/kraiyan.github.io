@@ -28,9 +28,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
 
-      .fade-in-section {
+      .fade-in-section-left {
         opacity: 0; /* Hidden initially */
         transform: translateX(40px); /* Position for the animation */
+        transition: opacity 0.9s ease-in, transform 0.9s ease-out;
+      }
+      .fade-in-section-right {
+        opacity: 0; /* Hidden initially */
+        transform: translateX(-40px); /* Position for the animation */
         transition: opacity 0.9s ease-in, transform 0.9s ease-out;
       }
       
@@ -285,7 +290,7 @@
           
           <div class="profile__item">
             <h1 class="title">I <span style="color: yellow;" class="auto-type"></span></h1>
-            <p class="fade-in-section">
+            <p class="fade-in-section-left">
               I'm Raiyan,
               <strong>full-stack</strong> engineer with
               a passion for
@@ -306,13 +311,13 @@
                   <p> Professional Projects</p>
               </div>
           </section>
-            <p class="fade-in-section">
+            <p class="fade-in-section-right">
               Currently,I'm looking for a new challenges,
               where I can
               <strong>apply my skills</strong> and
               <strong>learn</strong> even more.
             </p>
-            <p class="fade-in-section">
+            <p class="fade-in-section-left">
               Are you searching for a new team member? Check
               out my
               <a href="projects.html">recent projects</a>
@@ -323,7 +328,7 @@
                 >my Resume</a
               >.
             </p>
-            <p class="fade-in-section">
+            <p class="fade-in-section-right">
               Its cool you are here ! Want to connect? Find me on
               <a
                 href="contact.html"
@@ -357,8 +362,8 @@
         </div>
         <div class="about">
           <div class="description" style="background-color: #ffffff; color:black; padding:20px; border-radius:10px;">
-            <h3 class="about__title fade-in-section">Who Am I...</h3>
-            <p style="color: black;font-weight: 470;" class="fade-in-section">
+            <h3 class="about__title fade-in-section-right">Who Am I...</h3>
+            <p style="color: black;font-weight: 470;" class="fade-in-section-left">
               ...I am  a Software Engineer with 3 years of expirience in Full stack development(Backend focused) 
               including domains EdTech,Fintech,Agro and Logistics.In my engineering career,I have
               worked closely with CEOs,CTOs, and Product Managers to implement business logic and
@@ -391,7 +396,7 @@
           </div>
           <section class="profile_persona" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row;">
             <div style="flex: 1 1 50%; padding: 20px; box-sizing: border-box;">
-              <p class="fade-in-section">
+              <p class="fade-in-section-right">
                 While this was about my professional life, in my personal time I like playing
                 <a href="https://lichess.org/@/raiyanskhan" target="_blank">Chess</a>, watching series,
                 and learning more about new things (I have this urge to constantly feed my brain
@@ -411,10 +416,10 @@
          
           
           
-          <div class="values fade-in-section">
+          <div class="values ">
             <h2 class="values__title">My values:</h2>
             <div class="values-wrapper">
-              <div class="values__item value">
+              <div class="values__item value fade-in-section-left">
                 <img
                   src="img/icons/brain.png"
                   class="value__icon"
@@ -431,7 +436,7 @@
                   something from EVERYONE.
                 </p>
               </div>
-              <div class="values__item value">
+              <div class="values__item value fade-in-section-right">
                 <img
                   src="img/icons/growth.png"
                   class="value__icon"
@@ -446,7 +451,7 @@
                   from them is how I grow.
                 </p>
               </div>
-              <div class="values__item value">
+              <div class="values__item value fade-in-section-left">
                 <img
                   src="img/icons/team.png"
                   class="value__icon"
@@ -481,7 +486,7 @@
         
           <!-- If we need navigation buttons -->
         </div>
-        <div class="work-goals fade-in-section">
+        <div class="work-goals fade-in-section-left">
           <h3 class="work-goals__title">
             What I'm looking for...
           </h3>
@@ -600,11 +605,11 @@
       
       // Create an IntersectionObserver instance
       const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.3 // Trigger when 30% of the element is visible
       });
       
-      // Get all elements with class 'fade-in-section'
-      const fadeInSections = document.querySelectorAll('.fade-in-section');
+      // Get all elements with class 'fade-in-section-left'
+      const fadeInSections = document.querySelectorAll('.fade-in-section-left,.fade-in-section-right');
       
       // Observe each section
       fadeInSections.forEach(section => {

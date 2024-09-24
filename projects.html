@@ -21,6 +21,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
+      
+      .fade-in-section {
+        opacity: 0; /* Hidden initially */
+        transform: scale(0.8); /* Position for the animation */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        
+      }
+      
+      .fade-in-visible {
+        opacity: 1; /* When visible, fade-in */
+        transform: scale(1); /* Move to original position */
+      }
     .project_item{
       margin-bottom: 20px;
       padding: 10px;
@@ -163,8 +175,8 @@
                 src="img/projects/oneAndro.png"
               />
             </div>
-            <div class="card__content">
-              <p class="card__text">
+            <div class="card__content fade-in-section">
+              <p class=" card__text fade-in-section">
                OneAndro is India's Largest Loan Distributor Company and in this project we have developed a Fintech Application 
                to automate loan distributing process using a single app which includes Multiple Modules i.e Cleint interface, employee interface.
                This app has onboarding functionalities for all the employees and theire heirarchy as well.Similarly,We also have created onboarding proces for Leads(Cleints).
@@ -225,7 +237,7 @@
               />
             </div>
             <div class="card__content">
-              <p class="card__text">
+              <p class="    card__text fade-in-section">
                 This is a web app which facilitates students from all across the USA to ask for challenging questions ,concepts and assigments
                 which are not easily available on the Internet and other offline sources.
                 <br />
@@ -307,7 +319,7 @@
               />
             </div>
             <div class="card__content">
-              <p class="card__text">
+              <p class="    card__text fade-in-section">
                 This is the server side app for automating all the logistics process including fleet maintenance, real time fleet tracking,Warehouse availablity,
                 It includes all the process involved in the Logistics in a singular app
 
@@ -406,7 +418,7 @@
           />
         </div>
         <div class="card__content">
-          <p class="card__text">
+          <p class="    card__text fade-in-section">
            This project includes a series of AgroTech Business websites to support local farmers to sell their productions under one Umbrella to secure good deals and tackle all the problems withnin one single commnunity.
             <br />
             <br />
@@ -467,7 +479,7 @@
             />
           </div>
           <div class="card__content">
-            <p class="card__text">
+            <p class="    card__text fade-in-section">
              This project includes my personal portfolio website
               <br />
               <br />
@@ -528,7 +540,7 @@
               />
             </div>
             <div class="card__content">
-              <p class="card__text">
+              <p class="    card__text fade-in-section">
                This project includes a blogging app to share personal blogs related to different tags and categories
                 <br />
                 <br />
@@ -589,7 +601,7 @@
               />
             </div>
             <div class="card__content">
-              <p class="card__text">
+              <p class="    card__text fade-in-section">
                 This is a basic learning project for creating a chat application that supports Generative AI.In this project,
                 I have learned GenAI engineering,Prompt engineering,vector databases,and embeddings.
                 <br />
@@ -667,7 +679,7 @@
               />
             </div>
             <div class="card__content">
-              <p class="card__text">
+              <p class="    card__text fade-in-section">
                 This app provides a meta data to feed any large LLMs using fastaPi,lanchain and react in frontend.
                 <br />
                 <br />
@@ -741,6 +753,37 @@
       </footer>
     
     <!--  <script src="js/tota11y.min.js"></script> -->
-    <script src="dist/main.js"></script>
+    <script src="dist/main.js">
+    </script>
   </body>
 </html>
+
+<script>
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add class to element when it enters the viewport
+      entry.target.classList.add('fade-in-visible');
+      // Optionally, unobserve the element after it has appeared
+      //observer.unobserve(entry.target);
+    }
+    else {
+      // Remove class when the element leaves the viewport
+      entry.target.classList.remove('fade-in-visible');
+    }
+  });
+}
+
+// Create an IntersectionObserver instance
+const observer = new IntersectionObserver(handleIntersection, {
+  threshold: 0.3 // Trigger when 30% of the element is visible
+});
+
+
+const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+// Observe each section
+fadeInSections.forEach(section => {
+  observer.observe(section);
+});
+</script>
