@@ -38,6 +38,7 @@ main {
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  overflow: hidden;
 }
 @supports (display: grid) {
   .profile {

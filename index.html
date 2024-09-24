@@ -104,9 +104,9 @@
     .showcase {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
+      gap: 5px;
       place-items: center;
-      padding-top: 20px;
+      padding-top: 0px;
     }
     @media all and (max-width: 820px) {
       .showcase {
@@ -116,7 +116,7 @@
     
     @media all and (min-width: 768px) {
       .showcase {
-        padding: 10px 30px 0;
+        padding: 10px 10px 0;
       }
       
     }
@@ -134,12 +134,33 @@
     }
     
     .count {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: bold;
         color: white;
         
     }
-    
+  
+  .section-background__video {
+    filter: invert(1);
+    position: absolute;
+ 
+   top:10%;
+    left: 50%;
+    width: 100vw; /* Full viewport width */
+    height: 120vh; /* Full viewport height */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Maintain aspect ratio, cover entire container */
+   
+    z-index: -1; 
+  }
+  .content {
+    position: relative;
+    z-index: 1; /* Content stays on top */
+    color: white; /* Adjust text color for visibility */
+    padding: 20px;
+    text-align: center; /* Center text */
+  }
+  
     p {
         font-size: 1em;
         color: white;
@@ -281,7 +302,11 @@
         </nav>
       </header>
       <main class="main fade-in">
-        <div class="profile" style="background-image: url('./img/projects/map-image.png'); background-repeat:repeat">
+        <video playsinline="" autoplay="" muted="" loop="" class="section-background__video">
+          <source src="https://storage.googleapis.com/popshopprod-shop-renderer-assets-q9gk7sc6/themes/assets/74253f59-c16d-4728-9ad6-803da8ffdc5e/assets/hero-video-with-multiple-buttons-1700666646-video-ab4ceb1e95742187fe677bf9070cf092638955e28eec6d5b87a3db7455d9948b.mp4" type="video/mp4">
+        </video>
+        <div class="profile" >
+          
           <img
             src="img/profile/raiyan_rockstat.png"
             class="profile__portrait profile__item"
@@ -289,7 +314,7 @@
           />
           
           <div class="profile__item">
-            <h1 class="title">I <span style="color: yellow;" class="auto-type"></span></h1>
+            <h3 class="title">I <span style="color: yellow;" class="auto-type"></span></h3>
             <p class="fade-in-section-left">
               I'm Raiyan,
               <strong>full-stack</strong> engineer with
@@ -360,7 +385,7 @@
             </div>
           </div>
         </div>
-        <div class="about">
+        <div class="about" style="margin-top: 40px;">
           <div class="description" style="background-color: #ffffff; color:black; padding:20px; border-radius:10px;">
             <h3 class="about__title fade-in-section-right">Who Am I...</h3>
             <p style="color: black;font-weight: 470;" class="fade-in-section-left">
