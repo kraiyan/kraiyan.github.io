@@ -22,10 +22,11 @@ a {
 
 main {
   min-height: 100%;
+  width: 100%;
   flex: 1;
   /* this margin: 0 auto makes the element take up the horizontal space in the container */
-  margin: 0 auto;
-  max-width: 1000px;
+ 
+  
   text-align: justify-all;
 }
 /* --INDEX-- */
