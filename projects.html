@@ -96,8 +96,8 @@
   }
 </style>
   </head>
-  <body>
-    <div id="page-container">
+  <body id="page-container">
+   
       <!-- Header including the logo and the main navigation -->
       <header class="page-header" style="background-color: black;">
         <img
@@ -359,7 +359,7 @@
                 <br />
                 <span class="font-bold">Key steps</span>:
                 Setting up databases with mutliple tables
-                (Fleet  & warehouse,drivers,conssignments) through Sequelize.
+                (Fleet  [&] warehouse,drivers,conssignments) through Sequelize.
                 Employing HTTP authentication and generating
                 JWT tokens through express, hashing
                 passwords with Bcrypt, and validating data
@@ -717,6 +717,7 @@
                 offline use of the app.
                 <br />
                 <br />
+                </p>
                 <span class="font-bold">Key steps:</span>
             </div>
             <div class="card__footer">
@@ -793,7 +794,6 @@ function handleIntersection(entries, observer) {
       //observer.unobserve(entry.target);
     }
     else {
-      // Remove class when the element leaves the viewport
       entry.target.classList.remove('fade-in-visible');
     }
   });
@@ -832,6 +832,6 @@ const icons = document.querySelectorAll('.tech-icon12');
     observer12.observe(icon);
   });
 </script>
-</div>
+
 </body>
 </html>
