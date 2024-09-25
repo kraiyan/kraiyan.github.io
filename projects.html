@@ -22,6 +22,30 @@
 
     <style>
       
+      @keyframes shake {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(-5px);
+        }
+        50% {
+          transform: translateY(5px);
+        }
+        75% {
+          transform: translateY(-5px);
+        }
+      }
+      
+      .tech-icon12 {
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+      .animate {
+        opacity: 1; /* Fade in */
+        animation: shake 1s ease-in-out ;
+      }
+      
       .fade-in-section {
         opacity: 0; /* Hidden initially */
         transform: scale(0.8); /* Position for the animation */
@@ -202,19 +226,19 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-html-5.svg"
                   title="html5"
                   alt="html-5"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-sass.svg"
                   title="scss"
                   alt="scss"
@@ -259,43 +283,43 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-react.svg"
                   title="react"
                   alt="react"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-redux.svg"
                   title="redux"
                   alt="Redux"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-sass.svg"
                   title="Scss"
                   alt="Scss"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/parcel.svg"
                   title="Parcel"
                   alt="Parcel"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon  tech-icon12"
                   src="img/icons/icons8-bootstrap.svg"
                   title="Bootstrap"
                   alt="Bootstrap"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-netlify-48.png"
                   title="Netlify"
                   alt="Netlify"
@@ -344,43 +368,43 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-react.svg"
                   title="react"
                   alt="react"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-sass.svg"
                   title="scss"
                   alt="scss"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-mongodb-48.png"
                   title="MongoDB"
                   alt="MongoDB"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-mongoose.svg"
                   title="Mongoose"
                   alt="Mongoose"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-heroku.svg"
                   title="Heroku"
                   alt="Heroku"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-nodejs.svg"
                   title="NodeJS"
                   alt="NodeJS"
@@ -433,31 +457,31 @@
         <div class="card__footer">
           <div class="card__tech-stack-wrapper">
             <img
-              class="tech-icon"
+              class="tech-icon tech-icon12"
               src="img/icons/icons8-javascript.svg"
               title="javascript"
               alt="JavaScript"
             />
             <img
-              class="tech-icon"
+              class="tech-icon tech-icon12"
               src="img/icons/icons8-jest-48.png"
               title="jest"
               alt="jest"
             />
             <img
-              class="tech-icon"
+              class="tech-icon tech-icon12"
               src="img/icons/icons8-sass.svg"
               title="scss"
               alt="scss"
             />
             <img
-              class="tech-icon"
+              class="tech-icon tech-icon12"
               src="img/icons/icons8-react.svg"
               title="React"
               alt="React"
             />
             <img
-              class="tech-icon"
+              class="tech-icon tech-icon12"
               src="img/icons/icons8-amazon-web-services.svg"
               title="AWS Lambda"
               alt="AWS Lambda"
@@ -494,31 +518,31 @@
           <div class="card__footer">
             <div class="card__tech-stack-wrapper">
               <img
-                class="tech-icon"
+                class="tech-icon tech-icon12"
                 src="img/icons/icons8-javascript.svg"
                 title="javascript"
                 alt="JavaScript"
               />
               <img
-                class="tech-icon"
+                class="tech-icon tech-icon12"
                 src="img/icons/icons8-jest-48.png"
                 title="jest"
                 alt="jest"
               />
               <img
-                class="tech-icon"
+                class="tech-icon tech-icon12"
                 src="img/icons/icons8-sass.svg"
                 title="scss"
                 alt="scss"
               />
               <img
-                class="tech-icon"
+                class="tech-icon tech-icon12"
                 src="img/icons/icons8-react.svg"
                 title="React"
                 alt="React"
               />
               <img
-                class="tech-icon"
+                class="tech-icon tech-icon12"
                 src="img/icons/icons8-amazon-web-services.svg"
                 title="AWS Lambda"
                 alt="AWS Lambda"
@@ -555,31 +579,31 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-jest-48.png"
                   title="jest"
                   alt="jest"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-sass.svg"
                   title="scss"
                   alt="scss"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-react.svg"
                   title="React"
                   alt="React"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-amazon-web-services.svg"
                   title="AWS Lambda"
                   alt="AWS Lambda"
@@ -619,31 +643,31 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-jest-48.png"
                   title="jest"
                   alt="jest"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-sass.svg"
                   title="scss"
                   alt="scss"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-react.svg"
                   title="React"
                   alt="React"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-amazon-web-services.svg"
                   title="AWS Lambda"
                   alt="AWS Lambda"
@@ -695,25 +719,25 @@
             <div class="card__footer">
               <div class="card__tech-stack-wrapper">
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icons8-javascript.svg"
                   title="javascript"
                   alt="JavaScript"
                 />
                 <img
-                  class="tech-icon react-native"
+                  class="tech-icon react-native tech-icon12"
                   src="img/icons/icon-react-native.png"
                   title="React Native"
                   alt="React Native"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/expo_logo_icon_145293.svg"
                   title="Expo"
                   alt="Expo"
                 />
                 <img
-                  class="tech-icon"
+                  class="tech-icon tech-icon12"
                   src="img/icons/icon-firebase.svg"
                   title="Firebase"
                   alt="Firebase"
@@ -786,4 +810,24 @@ const fadeInSections = document.querySelectorAll('.fade-in-section');
 fadeInSections.forEach(section => {
   observer.observe(section);
 });
+
+const icons = document.querySelectorAll('.tech-icon12');
+</script>
+<script>
+  const observer12 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the 'animate' class when the icon is visible
+        entry.target.classList.add('animate');
+      }
+      else{
+        entry.target.classList.remove('animate');
+
+      }
+    });
+  });
+  // Observe each icon
+  icons.forEach((icon) => {
+    observer12.observe(icon);
+  });
 </script>
