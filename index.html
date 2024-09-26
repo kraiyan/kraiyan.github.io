@@ -155,7 +155,6 @@
     padding: 20px;
     text-align: center; /* Center text */
   }
-  
     p {
         font-size: 1em;
         color: white;
@@ -194,7 +193,7 @@
         const target = +counter.getAttribute('data-count');
         const count = +counter.innerText;
 
-        if (count < target) {
+        if (count < target) { 
             counter.innerText = Math.ceil(count + target / 100);
             setTimeout(() => incrementCounter(counter), 200);
         } else {
@@ -297,14 +296,12 @@
           </ul>
         </nav>
       </header>
-
-      <main class="main fade-in">
-        
-        <video playsinline autoplay muted  loop  class="section-background__video">
-          <source src="./img/projects/starsvideo.mp4" type="video/mp4">
-        </video>
-        <div class="profile" >
-          
+      <video  playsinline autoplay="" muted  loop  class="section-background__video">
+        <source src="./img/projects/starsvideo.mp4" type="video/mp4">
+      </video>
+      <main class="main ">
+      
+        <div class="profile">
           <img
             src="img/profile/raiyan_rockstat.png"
             class="profile__portrait profile__item"
