@@ -396,26 +396,21 @@
               AI projects for learning and hands on practice.My current profile includes (GenAI + Full stack) Engineering.
               <br />
               <br />
-              I'm fully focused individual with strong background in Computer Science( check out my professional journey  <a
-              class="cv-button"
-          style="background-color: yellow; color: black; padding:3px; border-radius:10px"
-              href="expirience.html"
-              target="_blank"
-              >my Journey</a
-            >) and passion for implementing cutting edge technologies for best business outcomes.I firmly
-              believe in the three core principles for my career which are Engineering,Quick-Learning and Problem Solving.
-              I think if I follow these three principles in my Tech Career then I can sustain for a long period of time in This
-              ever changing market and a very competitive environment.
-              <br />
-              <br />
-      
-              When it comes to Leadership qualities,I have managed team of 3 to 5 developers.
-              I have helped my team in basic training for the project,solving there queries and doubts,briefing them about tasks and validating the pushed code. 
-              During this process,I was also responsible for inspecting the overall code quality and connecting the works of different developers into one 
-              single page and delivering the projects in tight deadlines.
+              <div id="moreContent" style="display: none;">
+                <p style="color: black; font-weight: 470;" class="fade-in-section-left">
+                  I'm a fully focused individual with a strong background in Computer Science 
+                  (check out my professional journey <a class="cv-button" style="background-color: yellow; color: black; padding: 3px; border-radius: 10px" href="expirience.html" target="_blank">my Journey</a>) 
+                  and passion for implementing cutting-edge technologies for the best business outcomes. I firmly believe in the three core principles for my career: Engineering, 
+                  Quick Learning, and Problem Solving. I think if I follow these three principles, I can sustain a long career in this ever-changing and competitive market.
+                </p>
+                <p style="color: black; font-weight: 470;" class="fade-in-section-left">
+                  When it comes to leadership qualities, I have managed teams of 3 to 5 developers. I have provided my team with basic training for projects, 
+                  solved their queries and doubts, briefed them about tasks, and validated the pushed code. During this process, I was also responsible for 
+                  inspecting the overall code quality and merging the works of different developers into one cohesive project, delivering it under tight deadlines.
+                </p>
 
-             
-            <br />
+              </div>
+              <button id="toggleButton" style="background-color: yellow; color: black; padding: 5px; border-radius: 10px;" onclick="toggleContent()">Show More</button>
           </div>
           <section class="profile_persona" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row;">
             <div style="flex: 1 1 50%; padding: 20px; box-sizing: border-box;">
@@ -644,6 +639,21 @@ video.addEventListener('pause', function () {
   this.play();
 });
 
+    </script>
+
+    <script>
+      function toggleContent() {
+        var moreContent = document.getElementById("moreContent");
+        var toggleButton = document.getElementById("toggleButton");
+    
+        if (moreContent.style.display === "none") {
+          moreContent.style.display = "block";
+          toggleButton.textContent = "Show Less";
+        } else {
+          moreContent.style.display = "none";
+          toggleButton.textContent = "Show More";
+        }
+      }
     </script>
 
   </body>
