@@ -28,11 +28,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
 
+    
+
+      .form{
+        display: flex;
+        max-width: 70%;
+        flex-direction: column;
+       
+      }
+      
+      .form input {
+        height: 50px;
+        margin-top: 10px;
+        background-color: black;
+        border-radius: 10px;
+        padding: 5px;
+      
+      }
+      
+      .form :last-child{
+        width: 30%;
+        background-color: yellow;
+      }
+      
+    
+      
+      /* Make iframe responsive */
+      @media (max-width: 640px) {
+        .form {
+          max-width: 100%; /* Ensure it fits within smaller screens */
+          height: auto; /* Adjust height based on width */
+        }
+      }
       .skills-container {
         width: 100%;
         overflow: hidden;
         background-color: black;
-        padding: 20px;
+        padding: 40px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       }
       
@@ -46,7 +78,7 @@
       
       .skill {
         min-width: 200px;
-        background-image: "./img/projects/black-bg.jpg";
+      
         text-align: center;
         padding: 10px 20px;
         background-color: black;
@@ -480,15 +512,16 @@
               <div class="skill">Generative AI</div>
               <div class="skill">Frontend Development</div>
               <div class="skill">API Design</div>
+              <video   playsinline autoplay="" muted  loop  class="section-background__video">
+                <source src="./img/projects/starsvideo.mp4" type="video/mp4">
+              </video> 
               <div class="skill">Database Management</div>
-              
               <div class="skill">Project Management</div>
               <div class="skill">Cloud Services</div>
               <div class="skill">DevOps</div>
             </div>
           </div>
-          
-          <div class="values ">
+          <div class="values">
             <h2 class="values__title">My values:</h2>
             <div class="values-wrapper">
               <div class="values__item value fade-in-section-left">
@@ -557,6 +590,16 @@
           <div style="color:white"  class="swiper-pagination"></div>
         
           <!-- If we need navigation buttons -->
+        </div>
+        <div>
+          <h2 class = "values__title" >Contact me</h2>
+          <form class="form" onsubmit="Submit(event)">
+            <input placeholder="Your Name" name="Name" type="text" />
+            <input placeholder="Your Email" name="Email" type="email" />
+            <input placeholder="Your Contact Number" name="Phone" type="number" />
+            <input placeholder="Your Message" name="Message" type="text" />
+            <input name="Name" type="submit" />
+          </form>
         </div>
         <div class="work-goals fade-in-section-left">
           <h3 class="work-goals__title">
@@ -708,6 +751,28 @@ video.addEventListener('pause', function () {
           toggleButton.textContent = "Show More";
         }
       }
+    </script>
+    <script>
+      function Submit(e) {
+        event.preventDefault()
+        const formEle = document.querySelector("form");
+        const formDatab = new FormData(formEle);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbybkzQJXuTJ-Ae_nymvDPwSBCgAujVJYOhrUYdm53z6Jg0oNqRB8gGWTAqA40TrvodSFg/exec",
+          {
+            method: "POST",
+            mode:"no-cors",
+            body: formDatab
+          }
+        )
+          .then((data) => {
+            alert("form submitted successfully")
+            formEle.reset();
+          })
+          .catch((error) => {
+            console.log("The error",error);
+          });
+        }
     </script>
 
   </body>
