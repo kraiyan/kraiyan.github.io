@@ -32,7 +32,10 @@
 
       .form{
         display: flex;
+        margin-left: 120px;
         max-width: 70%;
+       justify-content: center;
+        text-align: center;
         flex-direction: column;
        
       }
@@ -54,10 +57,10 @@
         background-color: yellow;
       }
       .form :last-child :hover{
-        width: 30%;
+        width: 50%;
+        height: 60%;
         color:black;
         background-color: yellow;
-        
       }
       
     
@@ -66,6 +69,7 @@
       @media (max-width: 640px) {
         .form {
           max-width: 100%; /* Ensure it fits within smaller screens */
+          margin: auto;
           height: auto; /* Adjust height based on width */
         }
       }
@@ -607,7 +611,7 @@
             <input placeholder="Your Email" name="Email" type="email" />
             <input placeholder="Your Contact Number" name="Phone" type="number" />
             <input placeholder="Your Message" name="Message" type="text" />
-            <input name="Name" type="submit" />
+            <input name="Name" id="submitButton" type="submit" />
           </form>
         </div>
         <div class="work-goals fade-in-section-left">
@@ -764,6 +768,12 @@ video.addEventListener('pause', function () {
     <script>
       function Submit(e) {
         event.preventDefault()
+        var submitButton = document.getElementById("submitButton");
+         
+        
+          if (submitButton.textContent === "Submit") {
+            submitButton.textContent = "Submitting";
+          }
         const formEle = document.querySelector("form");
         const formDatab = new FormData(formEle);
         fetch(
