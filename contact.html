@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>Contact Raiyan Khan</title>
+    <title>Contact Raiyan</title>
     <link
       rel="icon"
       type="image/svg"
@@ -20,6 +20,45 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+      .form1 {
+        display: flex;
+        margin-left: 170px;
+        max-width: 70%;
+       justify-content: center;
+        text-align: center;
+        flex-direction: column;
+       
+      }
+      
+      .form1 input {
+        height: 50px;
+        margin-top: 10px;
+        color:white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 5px;
+      
+      }
+      
+      .form1 :last-child{
+        width: 30%;
+        color:black;
+        cursor: pointer;
+        background-color: yellow;
+      }
+      .form1 :last-child :hover{
+        width: 50%;
+        height: 60%;
+        color:black;
+        background-color: yellow;
+      }
+      @media (max-width: 640px) {
+        .form1 {
+          max-width: 100%; /* Ensure it fits within smaller screens */
+          margin: auto;
+          height: auto; /* Adjust height based on width */
+        }
+      }
       .fade-in {
         animation: fadeIn 2s ease-in-out;
     }
@@ -128,11 +167,18 @@
             >kraiyan466@gmail.com</a
           >
           <br />
+          <form class="form1" onsubmit="Submit(event)"></form1>
+            <input placeholder="Your Name" name="Name" type="text" />
+            <input placeholder="Your Email" name="Email" type="email" />
+            <input placeholder="Your Contact Number" name="Phone" type="number" />
+            <input placeholder="Your Message" name="Message" type="text" />
+            <input name="Name" id="submitButton" type="submit" />
+          </form>
         </div>
-        <!--CONTACT FORM-->
-        <!-- <div class="form contact__item">
+        <!--CONTACT form1-->
+        <!-- <div class="form1 contact__item">
             <h1>Leave me a message</h1>
-            <form method="post" id="contact-form">
+            <form1 method="post" id="contact-form1">
               <div class="input-wrapper">
                 <label class="standard-label" for="contact-name">Your name*:</label>
                 <br />
@@ -161,7 +207,7 @@
               <br />
               <input type="submit" value="Send message" class="button" />
               <br />
-            </form>   -->
+            </form1>   -->
       </div>
     </main>
     <!-- Footer with links to social media profiles -->
@@ -198,5 +244,33 @@
     </footer>
     <!-- <script src="js/tota11y.min.js"></script> -->
     <script src="dist/main.js"></script>
+    <script>
+      function Submit(e) {
+        event.preventDefault()
+        var submitButton = document.getElementById("submitButton");
+         
+        
+          if (submitButton.textContent === "Submit") {
+            submitButton.textContent = "Submitting";
+          }
+        const formEle = document.querySelector("form");
+        const formDatab = new FormData(formEle);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbybkzQJXuTJ-Ae_nymvDPwSBCgAujVJYOhrUYdm53z6Jg0oNqRB8gGWTAqA40TrvodSFg/exec",
+          {
+            method: "POST",
+            mode:"no-cors",
+            body: formDatab
+          }
+        )
+          .then((data) => {
+            alert("form submitted successfully")
+            formEle.reset();
+          })
+          .catch((error) => {
+            console.log("The error",error);
+          });
+        }
+    </script>
   </body>
 </html>
