@@ -27,7 +27,145 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-
+ 
+      .container12 {
+        position: relative;
+        display: flex;
+        min-height: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: black;
+       
+        z-index: 0;
+      }
+      
+      .gradient-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        transform: scaleY(1.25);
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+        isolation: isolate;
+      }
+      
+      .gradient {
+        position: absolute;
+        height: 14rem;
+        width: 30rem;
+        background-image: conic-gradient(var(--conic-position), var(--tw-gradient-stops));
+      }
+      
+      .gradient-left {
+        left: 50%;
+        background-image: conic-gradient(from 70deg at center top,  orange,500, transparent);
+        opacity: 1;
+      }
+      
+      .gradient-right {
+        right: 50%;
+        background-image: conic-gradient(from 290deg at center top, transparent,  orange, 500);
+        opacity: 1;
+      }
+      
+      .bg-blur {
+        position: absolute;
+        top: 50%;
+        height: 12rem;
+        width: 100%;
+        transform: translateY(3rem) scaleX(1.5);
+        background-color: black;
+        filter: blur(2rem);
+      }
+      
+      .backdrop {
+        position: absolute;
+        top: 50%;
+        height: 12rem;
+        width: 100%;
+        background-color: transparent;
+        opacity: 0.1;
+        backdrop-filter: blur(2rem);
+        z-index: 50;
+      }
+      
+      .blur-circle {
+        position: absolute;
+        z-index: 50;
+        height: 9rem;
+        width: 28rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: orange;
+        opacity: 0.5;
+        filter: blur(3rem);
+        border-radius: 9999px;
+      }
+      
+      .small-blur-circle {
+        position: absolute;
+        z-index: 30;
+        height: 9rem;
+        width: 16rem;
+        top: 50%;
+        transform: translateY(-6rem);
+        background-color: orange;
+        filter: blur(2rem);
+        border-radius: 9999px;
+      }
+      
+      .cyan-line {
+        position: absolute;
+        z-index: 50;
+        height: 0.5rem;
+        width: 15rem;
+        top: 50%;
+        transform: translateY(-7rem);
+        background-color: orange;
+      }
+      
+      .black-strip {
+        position: absolute;
+        z-index: 40;
+        height: 11rem;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-12.5rem);
+        background-color: black;
+      }
+      
+      .content {
+        position: relative;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.25rem;
+        transform: translateY(-5rem);
+      }
+      
+      h1 {
+        margin-top: 2rem;
+        background: linear-gradient(to bottom right, #cbd5e1, #94a3b8);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: -0.025em;
+      }
+      
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 4.5rem;
+        }
+      }
+    
       @media (max-width: 768px) {
         .profile1 {
           flex-direction: column;
@@ -598,6 +736,7 @@
         </div>
         <div>
         <div>
+          
         <h3>Contact me ! I dont bite...</h3>
           <div class="fade-in-section-left" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap:wrap">
            
@@ -645,7 +784,21 @@
         />
         </div>
       </main>
-
+      <div class="container12">
+        <div class="gradient-container">
+          <div class="gradient gradient-left"></div>
+          <div class="gradient gradient-right"></div>
+          <div class="bg-blur"></div>
+          <div class="backdrop"></div>
+          <div class="blur-circle"></div>
+          <div class="small-blur-circle"></div>
+          <div class="cyan-line"></div>
+          <div class="black-strip"></div>
+        </div>
+        <div class="content">
+          <h1>Open for work<br>Say Hi!</h1>
+        </div>
+      </div>
       <!-- Footer with links to social media profiles -->
       <footer id="footer" class="page-footer">
         <div class="footer__content-wrapper">
