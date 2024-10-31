@@ -970,23 +970,23 @@ video.addEventListener('pause', function () {
       particlesJS("particles-js", {
           "particles": {
               "number": {
-                  "value": 14,
+                  "value": 50,
                   "density": {
                       "enable": true,
-                      "value_area": 1000
+                      "value_area": 800
                   }
               },
               "color": {
                   "value": "#ffffff"
               },
               "shape": {
-                  "type": "circle",
+                  "type": "square",
                   "stroke": {
                       "width": 0,
                       "color": "#000000"
                   },
                   "polygon": {
-                      "nb_sides": 8
+                      "nb_sides": 10
                   }
               },
               "opacity": {
@@ -1006,11 +1006,11 @@ video.addEventListener('pause', function () {
               },
               "move": {
                   "enable": true,
-                  "speed": 6,
-                  "direction": "none",
-                  "random": false,
+                  "speed": 2,
+                  "direction": "forward",
+                  "random": true,
                   "straight": false,
-                  "out_mode": "out"
+                  "out_mode": "in"
               }
           },
           "interactivity": {
@@ -1018,7 +1018,8 @@ video.addEventListener('pause', function () {
               "events": {
                   "onhover": {
                       "enable": true,
-                      "mode": "repulse" // Particles will move away from the cursor
+                      "mode": "repulse", // Particles will move away from the cursor
+                      
                   },
                   "onclick": {
                       "enable": true,
