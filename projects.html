@@ -21,7 +21,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-      
+      .animate_image{
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(80px); 
+        transition: opacity 1s ease, transform 1s ease-out/* Animate opacity and position */
+    }
+    
+    /* This class will be added to trigger the animation */
+    .show {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
       @keyframes shake {
         0%, 100% {
           transform: translateY(0);
@@ -188,6 +198,7 @@
           <!--Project1-->
             <a
                   href="https://www.andromedaloans.com/"
+                  
                   target="_blank"
                 >
             
@@ -197,6 +208,7 @@
               <img
                 style="max-width: 100%;height: auto;"
                 src="img/projects/oneAndro.png"
+                class="animate_image"
               />
             </div>
             <div class="card__content fade-in-section">
@@ -260,6 +272,7 @@
               <img
                 style="max-width: 100%;height: auto;"
                 src="img/projects/qap_app.png"
+                class="animate_image"
               />
             </div>
             <div class="card__content">
@@ -341,6 +354,7 @@
             <h3 class="card__title">Logistics Application</h3>
             <div >
               <img
+                  class="animate_image"
                  style="max-width: 100%;height: auto;"
                 src="img/projects/shipcom.png"
               />
@@ -412,27 +426,14 @@
                   title="NodeJS"
                   alt="NodeJS"
                 />
-              </div>
-    
-                 
-            
-                <!-- <a
-                  href="https://my-movie-db22.herokuapp.com/index/"
-                  target="_blank"
-                >
-                  <img
-                    class="project-icon"
-                    src="img/icons/icons8-upload-50.png"
-                    alt="link to deployed app"
-                  />
-                </a> -->
-              
+              </div>            
             </div>
           </div>
           </a>
           <!--Project4-->
           <a
           href="https://brave-albattani-5b8d79.netlify.app/"
+
           target="_blank"
         >
       
@@ -442,6 +443,7 @@
           <img
               style="max-width: 100%;height: auto;"
             src="img/projects/agrofarms.png"
+            class="animate_image"
           />
         </div>
         <div class="card__content">
@@ -503,6 +505,8 @@
             <img
                 style="max-width: 100%;height: auto;"
               src="img/projects/rk_portfolio.png"
+               class="animate_image"
+            
             />
           </div>
           <div class="card__content">
@@ -564,6 +568,7 @@
               <img
                   style="max-width: 100%;height: auto;"
                 src="img/projects/rkwrites.png"
+                class="animate_image"
               />
             </div>
             <div class="card__content">
@@ -831,6 +836,28 @@ const icons = document.querySelectorAll('.tech-icon12');
   icons.forEach((icon) => {
     observer12.observe(icon);
   });
+  
+</script>
+
+<script>
+  const observer13 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const image = entry.target; // Use the entry's target directly
+
+        if (entry.isIntersecting) {
+            image.classList.add('show'); // Add class when in view
+        } else {
+            image.classList.remove('show'); // Optionally remove class when out of view
+        }
+    });
+});
+
+// Observe each image
+const images = document.querySelectorAll('.animate_image');
+images.forEach((image) => {
+    observer13.observe(image);
+});
+
 </script>
 
 </body>
