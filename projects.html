@@ -109,9 +109,8 @@
   <body id="page-container">
    
       <!-- Header including the logo and the main navigation -->
-      <header class="page-header"  style="-webkit-backdrop-filter: blur(10 px);
-      -moz-backdrop-filter: blur(10px) ;
-      backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.3);">
+      <header class="page-header"  style="-webkit-backdrop-filter: blur(10px); /* Add this line first, it fixes blur for Safari*/
+    backdrop-filter: blur(10px);  /* This line activates blur*/ background-color: rgba(0, 0, 0, 0.3);">
         <img
           class="logo"
           src="./img/logo/my_ai_image.png"
