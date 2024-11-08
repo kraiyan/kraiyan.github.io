@@ -47,7 +47,6 @@
         justify-content: center;
         overflow: hidden;
         background-color: black;
-       
         z-index: 0;
       }
       
@@ -269,21 +268,44 @@
           transform: translateX(-100%);
         }
       }
+      @keyframes blurEffect {
+        0% {
+            filter: blur(6px);
+        }
+        50% {
+            filter: blur(0);
+        }
+        100% {
+            filter: blur(6px);
+        }
+    }
+    
 
       .fade-in-section-left {
         opacity: 0; /* Hidden initially */
         transform: translateY(20px); /* Position for the animation */
-        transition: opacity 0.9s ease-in, transform 0.9s ease-out;
+        transition:  opacity 0.9s ease-in, transform 0.9s ease-out;
+        
       }
       .fade-in-section-right {
         opacity: 0; /* Hidden initially */
         transform: translateY(-20px); /* Position for the animation */
         transition: opacity 0.9s ease-in, transform 0.9s ease-out;
+       
       }
+
+      .fade-in-section-left-blur {
+        animation: blurEffect 5s ;
+    }
+    
+    .fade-in-section-right-blur{
+        animation: blurEffect 5s ;
+    }
       
       .fade-in-visible {
         opacity: 1; /* When visible, fade-in */
         transform: translateX(0); /* Move to original position */
+        animation: blurEffect 5s ;
       }
       #loading-bar-container {
         width: 100%;
@@ -553,7 +575,7 @@
           
           <div class="profile__item">
             <h3 class="title">I <span style="color: yellow;" class="auto-type"></span></h3>
-            <p class="fade-in-section-left">
+            <p class="fade-in-section-left fade-in-section-left-blur">
               I'm Raiyan,
               <strong>full-stack</strong> engineer with
               a passion for
@@ -578,13 +600,13 @@
         </div>
         </main>
         <div style="text-align: center;" class="about">
-          <p class="fade-in-section-right">
+          <p class="fade-in-section-right fade-in-section-right-blur">
             Currently,I'm looking for a new challenges,
             where I can
             <strong>apply my skills</strong> and
             <strong>learn</strong> even more.
           </p>
-          <p class="fade-in-section-left">
+          <p class="fade-in-section-left fade-in-section-left-blur">
             Are you searching for a new team member? Check
             out my
             <a href="projects.html">recent projects</a>
@@ -595,7 +617,7 @@
               >my Resume</a
             >.
           </p>
-          <p class="fade-in-section-right">
+          <p class="fade-in-section-right fade-in-section-right-blur">
             Its cool you are here ! Want to connect? Find me on
             <a
               href="contact.html"
@@ -629,7 +651,7 @@
        
         <div class="about">
           <div class="description" style="background-color: #ffffff; color:black; padding:20px; border-radius:10px;">
-            <h3 class="about__title fade-in-section-right">Who Am I...</h3>
+            <h3 class="about__title fade-in-section-right fade-in-section-right-blur">Who Am I...</h3>
             <p style="color: black;font-weight: 470;" class="fade-in-section-left">
               ...I am  a Software Engineer with 3 years of expirience in Full stack development(Backend focused) 
               including domains EdTech,Fintech,Agro and Logistics.In my engineering career,I have
@@ -644,12 +666,12 @@
               <br />
               <br />
               <div id="moreContent" style="display: none;">
-                <p style="color: black; font-weight: 470;" class="fade-in-section-left">
+                <p style="color: black; font-weight: 470;" class="fade-in-section-left fade-in-section-left-blur">
                   
                   I am passionate about  implementing cutting-edge technologies for the best business outcomes. I firmly believe in the three core principles for my career: Engineering, 
                   Quick Learning, and Problem Solving. I think if I follow these three principles, I can sustain a long career in this ever-changing and competitive market.
                 </p>
-                <p style="color: black; font-weight: 470;" class="fade-in-section-left">
+                <p style="color: black; font-weight: 470;" class="fade-in-section-left fade-in-section-left-blur">
                   When it comes to leadership qualities, I have managed teams of 3 to 5 developers. I have provided my team with basic training for projects, 
                   solved their queries and doubts, briefed them about tasks, and validated the pushed code. During this process, I was also responsible for 
                   inspecting the overall code quality and merging the works of different developers into one cohesive project, delivering it under tight deadlines.
@@ -660,7 +682,7 @@
           </div>
           <section class="profile_persona" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row;">
             <div style="flex: 1 1 50%; padding: 20px; box-sizing: border-box;">
-              <p class="fade-in-section-right">
+              <p class="fade-in-section-right fade-in-section-right-blur">
                 While this was about my professional life, in my personal time I like playing
                 <a href="https://lichess.org/@/raiyanskhan" target="_blank">Chess</a>, watching series,
                 and learning more about new things (I have this urge to constantly feed my brain
@@ -680,7 +702,7 @@
           <div class="values" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
             <h2 class="values__title" style="margin-bottom: 20px;">My values:</h2>
             <div class="values-wrapper" style="display: flex; justify-content: space-between; gap: 20px; width: 100%; max-width: 1200px;">
-              <div class="values__item value fade-in-section-left" style="flex: 1; 
+              <div class="values__item value fade-in-section-left fade-in-section-left-blur" style="flex: 1; 
               border: 2px solid orange; 
               padding: 20px; 
               text-align: center; 
@@ -697,7 +719,7 @@
                 </p>
               </div>
               
-              <div class="values__item value fade-in-section-right"  style="flex: 1; 
+              <div class="values__item value fade-in-section-right fade-in-section-right-blur"  style="flex: 1; 
               border: 2px solid orange; 
               padding: 20px; 
               text-align: center; 
@@ -714,7 +736,7 @@
                 </p>
               </div>
               
-              <div class="values__item value fade-in-section-left" style="flex: 1; 
+              <div class="values__item value fade-in-section-left fade-in-section-left-blur" style="flex: 1; 
               border: 2px solid orange; 
               padding: 20px; 
               text-align: center; 
@@ -785,8 +807,8 @@
           </div>
           <div id="particles-js"> </div>
         <h3>Contact me ! I dont bite...</h3>
-          <div class="fade-in-section-left" style="display: flex; flex-direction: row; align-items: center; flex-wrap:wrap; justify-content:space-around">
-            <form class="fade-in-section-right" onsubmit="Submit(event)" style="flex-grow: 1; max-width: 500px; width: 100%;">
+          <div class="fade-in-section-left fade-in-section-left-blur" style="display: flex; flex-direction: row; align-items: center; flex-wrap:wrap; justify-content:space-around">
+            <form class="fade-in-section-right fade-in-section-right-blur" onsubmit="Submit(event)" style="flex-grow: 1; max-width: 500px; width: 100%;">
               <input placeholder="Your Name" name="Name" type="text" style="width: 100%; background-color:black; color:white; padding: 10px; margin-bottom: 10px; border-radius:10px" />
               <input placeholder="Your Email" name="Email" type="email" style="width: 100%; background-color:black; color:white; padding: 10px; margin-bottom: 10px; border-radius:10px" />
               <input placeholder="Your Contact Number" name="Phone" type="number" style="width: 100%; background-color:black; color:white; padding: 10px; margin-bottom: 10px; border-radius:10px" />
@@ -802,7 +824,7 @@
         <h4 style="font-size: 18px; margin-bottom: 15px;">
           aka my employer wish list
         </h4>
-        <div class="fade-in-section-left" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap:wrap">
+        <div class="fade-in-section-left fade-in-section-left-blur" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; flex-wrap:wrap">
           <ul style="flex-grow: 1; max-width: 500px; width: 100%; list-style: none; padding: 0; margin: 0; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
             <li style="margin-bottom: 10px; padding: 10px; display: flex; align-items: center; background-color: #fff; color:black; border-bottom: 1px solid #eee; border-radius: 10px 10px 0 0;">
               <span style="margin-right: 10px;">✔️</span>
@@ -938,7 +960,7 @@
       });
       
       // Get all elements with class 'fade-in-section-left'
-      const fadeInSections = document.querySelectorAll('.fade-in-section-left,.fade-in-section-right');
+      const fadeInSections = document.querySelectorAll('.fade-in-section-left,.fade-in-section-right,.fade-in-section-left-blur,fade-in-section-right-blur');
       
       // Observe each section
       fadeInSections.forEach(section => {
