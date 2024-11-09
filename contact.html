@@ -59,8 +59,21 @@
           height: auto; /* Adjust height based on width */
         }
       }
+      @keyframes blurEffect {
+        0% {
+            filter: blur(6px);
+        }
+        50% {
+            filter: blur(3);
+        }
+        100% {
+            filter: blur(0px);
+        }
+    }
       .fade-in {
         animation: fadeIn 2s ease-in-out;
+        animation: blurEffect 1.5s ;
+
     }
     @keyframes fadeIn {
         from { opacity: 0; }
