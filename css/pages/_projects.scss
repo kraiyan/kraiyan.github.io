@@ -2,15 +2,14 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(320px, 1fr)
-  );
+  grid-template-columns: repeat(1, 3fr); /* 3 equal-width columns */
   grid-auto-rows: auto;
   grid-auto-flow: dense;
-  gap: 20px;
+  gap: 10px;
   margin: 0 auto;
-  max-width: 1250px;
+  height:800px;
+  max-width: 1500px;
+  grid-auto-rows: 1fr;
 }
 
 .card {
@@ -22,28 +21,34 @@
   border: 5px solid $border;
   color: black;
   border-radius: 8px;
-    padding: 16px;
-    margin: 8px;
-    flex: 1 1 calc(33.333% - 16px); /* 3 cards in a row */
-    box-sizing: border-box;
+  padding: 9px;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 800px; /* Allow cards to stretch to equal heights */
+  display: flex;
+  flex-direction: column;
+}
 
-  &__content {
-    margin-top: 10px;
-    flex: 1;
-    line-height: 1.5;
-    font-size: 0.9em;
-    padding: 0 15px 0 15px;
-  }
-  &__title {
-    margin: 10px 0;
-  }
+/* Card content */
+.card__content {
+  margin-top: 10px;
+  flex: 1;
+  line-height: 1.5;
+  font-size: 0.9em;
+ 
+}
 
-  &__image-wrapper {
-    width: 99.5%;
-    height: 230px;
-    padding: 0 5px;
-    margin: 0 auto;
-  }
+/* Card title */
+.card__title {
+  margin: 10px 0;
+}
+
+/* Image wrapper */
+.card__image-wrapper {
+  width: 99.5%;
+  height: 230px;
+  padding: 0 5px;
+  margin: 0 auto;
 }
 
 div.card__content p {
